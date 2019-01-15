@@ -31,6 +31,7 @@
     "drupal/bootstrap": "3.1",
     "nuvoleweb/drupal-behat": "~1.1.0",
     "phpro/grumphp": "~0.14",
+    "openeuropa/behat-transformation-context" : "~0.1",
     "openeuropa/drupal-core-require-dev": "~8.6@rc",
     "openeuropa/task-runner": "~1.0-beta2"
   },

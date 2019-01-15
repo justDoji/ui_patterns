@@ -7,17 +7,17 @@ Feature: Overview
   Scenario: Patterns overview page is only accessible to users with proper permissions.
 
     Given I am logged in as a user with the "access patterns page" permission
-    And I am on "/patterns"
+    And I am on "the Patterns page"
     Then I should get a "200" HTTP response
 
     When I am logged in as a user with the "authenticated" role
-    And I am on "/patterns"
+    And I am on "the Patterns page"
     Then I should get a "403" HTTP response
 
   Scenario: Patterns overview page displays all available patterns.
 
     Given I am logged in as a user with the "access patterns page" permission
-    And I am on "/patterns"
+    And I am on "the Patterns page"
 
     Then I should see the heading "Jumbotron"
     And I should see "A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site."
@@ -44,7 +44,7 @@ Feature: Overview
   Scenario: Pattern template can be customized by setting the 'template' definition property.
 
     Given I am logged in as a user with the "access patterns page" permission
-    And I am on "/patterns"
+    And I am on "the Patterns page"
 
     Then I should see the heading "Metadata"
     And I should see "Display a content metadata consisting of categories, publication date and author."
@@ -55,7 +55,7 @@ Feature: Overview
   Scenario: Pattern template can be customized by setting the 'use' definition property.
 
     Given I am logged in as a user with the "access patterns page" permission
-    And I am on "/patterns"
+    And I am on "the Patterns page"
 
     Then I should see the heading "Modal"
     And I should see "Here is your modal title"
@@ -64,7 +64,7 @@ Feature: Overview
   Scenario: Libraries defined in the pattern definition should be loaded correctly.
 
     Given I am logged in as a user with the "access patterns page" permission
-    And I am on "/patterns/media"
+    And I am on "the Patterns media page"
     Then the response should contain "/ui_patterns_test_theme/templates/patterns/media/css/media1.css"
     And the response should contain "/ui_patterns_test_theme/templates/patterns/media/css/media2.css"
     And the response should contain "/ui_patterns_test_theme/templates/patterns/media/js/media1.js"
@@ -91,7 +91,7 @@ Feature: Overview
   Scenario: "Button" overview page displays all pattern's variants.
 
     Given I am logged in as a user with the "access patterns page" permission
-    And I am on "/patterns/button"
+    And I am on "the Patterns button page"
 
     Then I should see the heading "Button"
     And I should see "A simple button."

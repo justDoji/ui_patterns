@@ -37,17 +37,17 @@ Feature: Content
     And I should see "Jumbotron subtitle" in the "jumbotron"
 
   Scenario: Patterns can be used to style views.
-    Given I am on "/articles"
+    Given I am on "the Articles page"
     Then I should see the link "Article title" in the "media_heading"
     And I should see "Article body" in the "media_text"
 
   Scenario: Developers can render patterns by using Twig functions.
-    Given I am on "/patterns-test"
+    Given I am on "the Patterns test page"
     Then I should see "Here is your modal title" in the "modal"
     And I should see the button "Save changes" in the "modal"
     And I should see the link "Link title"
 
   Scenario: Patterns render as Panels layouts.
-    Given I am on "/panels-test-page"
+    Given I am on "the Panels test page"
     Then I should see "Here is your jumbotron title" in the "jumbotron"
 

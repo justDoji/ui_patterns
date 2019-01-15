@@ -16,6 +16,14 @@ default:
         - 'NuvoleWeb\Drupal\DrupalExtension\Context\VisibilityContext'
         - 'NuvoleWeb\Drupal\DrupalExtension\Context\ContentContext'
         - 'FeatureContext'
+        - 'OpenEuropa\Behat\TransformationContext':
+            pages:
+              Articles: '/articles'
+              Patterns test: '/patterns-test'
+              Panels test: '/panels-test-page'
+              Patterns: '/patterns'
+              Patterns media: '/patterns/media'
+              Patterns button: '/patterns/button'
   extensions:
     Behat\MinkExtension:
       goutte: ~
